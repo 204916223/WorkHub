@@ -1,0 +1,29 @@
+:root { color-scheme: dark; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif; color: #d8d9dc; background: #111214; font-size: 14px; font-synthesis: none; --bg: #111214; --surface: #1b1c1f; --border: #2d2e32; --muted: #92949b; --accent: #3487a4; --green: #58b59a; }
+* { box-sizing: border-box; }
+body { margin: 0; }
+button, input, textarea, select { font: inherit; }
+button { cursor: pointer; border: 1px solid var(--border); border-radius: 6px; background: #25262a; color: #d8d9dc; padding: 8px 12px; transition: background .15s, border-color .15s; }
+button:hover { background: #303137; border-color: #4a4d55; }
+button:disabled { opacity: .45; cursor: default; }
+button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible, [tabindex]:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+input, textarea, select { width: 100%; min-width: 0; border: 1px solid #393a40; border-radius: 6px; padding: 10px 12px; background: #242529; color: #dedfe2; }
+input::placeholder, textarea::placeholder { color: #777a82; }
+h1, h2, h3, p { margin: 0; }
+h1 { font-size: 24px; font-weight: 650; }
+h2 { font-size: 21px; font-weight: 600; }
+h3 { font-size: 16px; font-weight: 600; }
+small { font-size: 12px; }
+code, pre, .mono { font-family: 'SFMono-Regular', Consolas, monospace; }
+pre { margin: 12px 0; padding: 12px; background: #111214; border-radius: 6px; color: #b5b9c3; font-size: 12px; white-space: pre-wrap; overflow-wrap: anywhere; }
+.primary { background: #287a96; border-color: #287a96; color: #f4fafb; }
+.primary:hover { background: #348da9; border-color: #348da9; }
+.muted { color: var(--muted); }
+.text-link { border: 0; background: transparent; color: #70b5d1; padding: 4px 0; font-size: 12px; }
+.surface { border: 1px solid var(--border); border-radius: 10px; background: var(--surface); padding: 22px; }
+.status-dot { display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: var(--green); }
+.status-dot.offline { background: #cfaa59; }
+.resizing { cursor: col-resize; user-select: none; }
+::-webkit-scrollbar { width: 7px; height: 7px; background: transparent; }
+::-webkit-scrollbar-track, ::-webkit-scrollbar-corner { background: transparent; }
+::-webkit-scrollbar-thumb { background: #414349; border-radius: 5px; }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; } }

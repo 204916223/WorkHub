@@ -1,0 +1,21 @@
+[Unit]
+Description=WorkHub work assistant host
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=robot
+Group=robot
+WorkingDirectory=/home/robot/WorkHub
+Environment=NODE_ENV=production
+Environment=HOST=172.19.3.32
+Environment=PORT=3080
+Environment=TZ=Asia/Shanghai
+Environment=WORKHUB_DATA_DIR=/home/robot/WorkHub/data/users
+ExecStart=/usr/local/bin/node /home/robot/WorkHub/server/index.js
+Restart=on-failure
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target

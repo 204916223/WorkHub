@@ -1,0 +1,24 @@
+{
+  "name": "workhub",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=22.13.0" },
+  "scripts": {
+    "dev": "node scripts/dev.mjs",
+    "build:host": "tsc -p tsconfig.host.json",
+    "build": "npm run build:host && vite build",
+    "start": "node server/index.js",
+    "test": "npm run build:host && node --test tests/*.test.mjs",
+    "verify": "npm test && npm run build"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.30.0",
+    "vue": "^3.5.13"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.2.1",
+    "typescript": "^5.6.3",
+    "vite": "^6.0.5"
+  }
+}
